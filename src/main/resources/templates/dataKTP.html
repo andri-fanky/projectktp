@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <div th:replace="header :: header"></div>
+    <body>
+        <section class="container">
+            <div>
+                <button type="button" class="btn btn-outline-primary btn-sm">Tambah Data</button>
+            </div>
+            <table id="table" class="table table-striped mt-3">
+                <thead>
+                    <tr>
+                        <th>NIK</th>
+                        <th>Nama</th>
+                        <th>Tanggal Lahir</th>
+                        <th>Alamat</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="item:${data}">
+                        <td th:text="${item.noKtp}"></td>
+                        <td th:text="${item.nama}"></td>
+                        <td th:text="${#calendars.format(item.tglLahir, 'dd MMM yyyy')}"></td>
+                        <td th:text="${item.alamat}"></td>
+                        <td class="col-md-2">
+                            <button type="button" class="btn btn-outline-info btn-sm">Detail</button>
+                            <button type="button" class="btn btn-outline-primary btn-sm">Edit</button>
+                            <button type="button" class="btn btn-outline-danger btn-sm">Hapus</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </body>
+</html>
