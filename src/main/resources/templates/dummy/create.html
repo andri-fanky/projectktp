@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <div th:replace="header :: header"></div>
+    <body>
+        <section class="container">
+            <h2>Create Dummy</h2>
+            <form action="/store" method="POST" enctype="multipart/form-data">
+                <table id="table" class="table table-borderless mt-3">
+                    <tbody class="align-middle">
+                        <tr>
+                            <td class="col-md-2">ID</td>
+                            <td class="col-md-4">
+                                <input type="text" name="id" class="form-control" aria-label="ID" aria-describedby="inputGroup-sizing-sm">
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-2">Tanggal Lahir</td>
+                            <td class="col-md-4">
+                                <input type="date" name="tanggal" class="form-control" aria-label="ID" aria-describedby="inputGroup-sizing-sm">
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-2">Pas Foto</td>
+                            <td class="col-md-4">
+                                <input type="file" name="gambar" class="form-control" aria-label="ID" aria-describedby="inputGroup-sizing-sm">
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button type="submit" class="btn btn-outline-primary btn-sm">Submit</button>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </section>
+    </body>
+</html>
